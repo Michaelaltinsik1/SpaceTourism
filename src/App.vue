@@ -1,21 +1,27 @@
 <template>
-  <div id="app">
+  <div class="wrapper">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/Destination">Destination</router-link>
+    <router-link to="/Crew">Crew</router-link>
+    <router-link to="/Technology">Technology</router-link>
+  </nav>
+    <router-view></router-view>
   </div>
+  <!-- <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/Destination">Destination</router-link>
+    <router-link to="/Crew">Crew</router-link>
+    <router-link to="/Technology">Technology</router-link>
+  </nav> -->
 </template>
-<script>
-// import { defineComponent } from '@vue/composition-api'
 
-// export default defineComponent({
-//   setup() {
-    
-//   },
-// })
+<script>
+export default {
+
+}
 </script>
+
 <style lang="scss">
   @import "./assets/styles/_colors";
   @import "./assets/styles/_reset";
