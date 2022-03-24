@@ -12,5 +12,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .text{
+    color: white;
+  }
 </style>
