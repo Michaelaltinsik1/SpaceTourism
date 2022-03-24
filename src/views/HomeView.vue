@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p>{{$mq}}</p>
-    <h1>Welcome to Your Vue.js App</h1>
+    <p class="text">{{$mq}}</p>
+    <h1 class="primary-heading">Welcome to Your Vue.js App</h1>
   </div>
 </template>
