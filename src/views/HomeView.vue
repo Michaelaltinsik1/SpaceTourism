@@ -1,7 +1,7 @@
 <template>
   <main class="home">
     <p class="text">{{$mq}}</p>
-    <h1 class="primary-heading">Welcome to Your Vue.js App</h1>
+    <h1 class="primary-heading">Home</h1>
   </main>
 </template>
 
@@ -12,6 +12,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  
   .text{
     color: white;
   }

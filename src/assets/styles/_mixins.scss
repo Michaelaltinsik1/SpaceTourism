@@ -1,0 +1,8 @@
+/***
+    Hover and active Effects
+***/
+@mixin underlineHoverEffect {
+    a{
+        text-decoration: underline;
+    }
+}

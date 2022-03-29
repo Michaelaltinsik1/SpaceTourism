@@ -1,3 +1,16 @@
 $base-dark: #0B0D17;
 $base-light: #FFFFFF;
 $secondary-light: #D0D6F9;
+
+
+.primary-heading,
+.secondary-heading,
+.tertiary-heading,
+.quaternary-heading,
+.text{
+    color: $base-light;
+}
+
+.nav-text,.quinary-heading{
+    color:$secondary-light;
+}

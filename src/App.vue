@@ -1,21 +1,8 @@
 <template>
   <div class="wrapper" :class="[currentRouteName, $mq]">
-    <SiteHeader/>
-    <p :class="$mq">{{currentRouteName}}</p>
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/Destination">Destination</router-link>
-      <router-link to="/Crew">Crew</router-link>
-      <router-link to="/Technology">Technology</router-link>
-    </nav> -->
+    <SiteHeader class="site-h" :class="$mq"/>
     <router-view></router-view>
   </div>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/Destination">Destination</router-link>
-    <router-link to="/Crew">Crew</router-link>
-    <router-link to="/Technology">Technology</router-link>
-  </nav> -->
 </template>
 
 <script>
@@ -34,11 +21,19 @@
   @import "./assets/styles/_colors";
   @import "./assets/styles/_reset";
   @import "./assets/styles/_typography";
-  
+  body,html{
+    min-height: 100vh;
+  }
   .wrapper{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    .site-h{
+      min-height: 100px;
+    }
+    .site-h.mobile{
+      min-height: 80px;
+    }
   }
   .wrapper.home{
     background-image:url('./assets/home/background-home-desktop.jpg');
