@@ -3,24 +3,60 @@
 
 h1, 
 .primary-heading{
+    // font-size: 150px;
     font-size: 150px;
+    &.tablet{
+        font-size: 120px;
+        @media only screen and (max-width: 600px) and (min-width: 448px)  {
+            font-size: 100px;       
+        }
+    }
+    &.mobile{
+        font-size: 80px;
+    }
 }
 h2, 
 .secondary-heading{
     font-size: 100px;
+    &.tablet{
+        font-size: 80px;
+    }
+    &.mobile{
+        font-size: 56px;
+    }
 }
 h3, 
 .tertiary-heading{
     font-size: 56px;
+    &.tablet{
+        font-size: 40px;
+    }
+    &.mobile{
+        font-size: 24px;
+    }
 }
 h4, 
 .quaternary-heading{
     font-size: 32px;
+    &.tablet{
+        font-size: 24px;
+    }
+    &.mobile{
+        font-size: 16px;
+    }
 }
 h5, 
 .quinary-heading{
     font-size: 28px;
     letter-spacing: 4.75px;
+    &.tablet{
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+    &.mobile{
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
 }
 .primary-heading,
 .secondary-heading,
@@ -37,6 +73,15 @@ h5,
 .text{
     font-family: "Barlow";
 }
+.text{
+    font-size: 18px;
+    &.tablet{
+        font-size: 16px;
+    }
+    &.mobile{
+        font-size: 15px;
+    }
+}
 .sub-heading-one{
     font-size: 28px;
 }
@@ -50,4 +95,10 @@ h5,
 }
 .upper-case{
     text-transform: uppercase;
+}
+.explore{
+    font-size: 32px;
+    &.mobile{
+        font-size: 20px;
+    }
 }

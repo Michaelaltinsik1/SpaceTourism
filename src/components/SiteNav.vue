@@ -96,10 +96,6 @@ export default {
                 &:hover{  
                     border-bottom: 2px solid rgba($base-light, 0.5);
                 }
-                .nav-text{
-                    // min-height: 100%;
-                    // padding: 2rem;
-                }
             } 
         }
         @media only screen and (max-width: 600px) and (min-width: 448px)  {
