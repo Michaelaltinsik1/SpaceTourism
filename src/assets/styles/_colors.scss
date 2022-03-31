@@ -6,17 +6,24 @@ $secondary-light: #D0D6F9;
 .primary-heading,
 .secondary-heading,
 .tertiary-heading,
-.quaternary-heading{
+.quaternary-heading,
+.sub-heading-two{
     color: $base-light;
 }
 .text{
     color: $secondary-light;
 }
 
-.nav-text,.quinary-heading{
+.nav-text,
+.quinary-heading,
+.sub-heading-one
+{
     color:$secondary-light;
 }
 .explore{
     background-color: $base-light;
     color: $base-dark;
 }
+.planet-info-container{
+    border-top: 0.1px solid rgba($base-light, 0.2);
+  }

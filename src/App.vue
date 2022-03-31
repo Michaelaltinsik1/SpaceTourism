@@ -18,7 +18,7 @@
 </script>
 
 <style lang="scss">
-  @import "./assets/styles/_colors";
+  @import "@/assets/styles/_colors";
   @import "./assets/styles/_reset";
   @import "./assets/styles/_typography";
   body,html{
@@ -34,9 +34,6 @@
       .main-content{
         margin: auto 0rem;
       }
-      // .site-h{
-      //   margin-bottom: 2rem;
-      // }
     }
     .site-h{
       min-height: 100px;
