@@ -89,10 +89,15 @@ export default {
             .nav-link{
                 display: flex;
                 min-height: 100%;
-                flex-shrink: 1;
-                align-items: center;
+                align-items: stretch;
                 justify-content: center;
+                min-height: 100%;
                 margin: 0rem 1rem;
+                .nav-text{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
                 &:hover{  
                     border-bottom: 2px solid rgba($base-light, 0.5);
                 }
