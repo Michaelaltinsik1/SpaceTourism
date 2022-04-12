@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper" :class="[currentRouteName, $mq]">
     <SiteHeader class="site-h" :class="$mq"/>
-    <router-view class="main-content"></router-view>
+    <router-view class="main-content" ></router-view>
   </div>
 </template>
 
@@ -33,7 +33,11 @@
       flex-direction: column;
       .main-content{
         margin: auto 0rem;
+        &.destination{
+          //margin: 0rem;
+        }
       }
+      
     }
     .site-h{
       min-height: 100px;
@@ -53,6 +57,9 @@
     }
   }
   .destination{
+    .main-content.desktop{
+      margin: 0rem;
+    }
     background-image:url('./assets/destination/background-destination-desktop.jpg');
     &.tablet{
       background-image:url('./assets/destination/background-destination-tablet.jpg');

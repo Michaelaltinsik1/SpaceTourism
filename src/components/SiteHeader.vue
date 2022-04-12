@@ -32,8 +32,14 @@ import SiteNav from './SiteNav.vue'
       .nav{
         min-height: 70px;
       }
-  }
-  .site-header.mobile{
-    padding: 0rem 1.5rem;
+      &.tablet{
+        padding-top: 0rem;
+        .nav{
+          align-self: flex-start;
+        }
+      }
+      &.mobile{
+        padding: 0rem 1.5rem;
+      }
   }
 </style>
