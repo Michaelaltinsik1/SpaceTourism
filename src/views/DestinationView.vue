@@ -4,7 +4,7 @@
       </span>Pick your destination
     </h5>
     <img class="planet-image" :src="require(`../assets/destination/image-${getQuery}.webp`)" :alt=getQuery width="400" height="400">
-    <planetData class="planetData" @getPlanetData="changeImage"/>
+    <planetData class="planetData" @getPlanetData="changeImage" :planetInformation="planetInfo"/>
   </main>
 </template>
 
@@ -12,9 +12,22 @@
   import planetData from '../components/PlanetDataDestination.vue'
   export default {
     components:{planetData},
+    data(){
+      return{
+        planetInfo : {
+          description: "",
+          distance: "",
+          images: {},
+          name: "",
+          travel: ""
+        }
+      }
+    },
     computed:{
       getQuery(){
-        return this.$route.query.planet;
+        let planet = this.$route.query.planet
+        this.getPlanetData(planet);
+        return planet;
       }
     },
     methods:{
@@ -22,6 +35,17 @@
         if(this.$route.query.planet != planet){
           this.$router.replace({query: {planet}})
         }
+      },
+      getPlanetData(planet){
+        console.log(planet);
+        this.$store.dispatch("getPlanetData", 
+          {
+            name : planet, 
+            page: "destinations"
+          }
+        );
+        this.planetInfo = this.$store.state.currData;
+        console.log("planetInfo: ", this.planetInfo);
       }
     },
     created(){

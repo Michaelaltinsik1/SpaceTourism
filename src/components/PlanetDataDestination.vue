@@ -6,22 +6,22 @@
           <li @click="setPlanetName('europa')" class="upper-case nav-text" :class="{ 'active' : currentRouteName === 'europa'}">Europa</li>
           <li @click="setPlanetName('titan')" class="upper-case nav-text" :class="{ 'active' : currentRouteName === 'titan'}">Titan</li>
         </ul>
-        <h2 class="center-text upper-case secondary-heading" :class="$mq">Moon</h2>
+        <h2 class="center-text upper-case secondary-heading" :class="$mq">{{planetInformation.name}}</h2>
         <p class="center-text text" :class="$mq">
-          See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. 
-          While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+          {{planetInformation.description}}
         </p>
         <div class="planet-info-container" :class="$mq">
           <h5 class="center-text sub-heading-two upper-case">Avg. distance</h5>
-          <h4 class="center-text sub-heading-one upper-case">384,400 km</h4>
+          <h4 class="center-text sub-heading-one upper-case">{{planetInformation.distance}}</h4>
           <h5 class="center-text sub-heading-two upper-case">Est. travel time</h5>
-          <h4 class="center-text sub-heading-one upper-case">3 Days</h4>
+          <h4 class="center-text sub-heading-one upper-case">{{planetInformation.travel}}</h4>
         </div>
     </article>
 </template>
 
 <script>
 export default {
+    props:['planetInformation'],
     computed:{
         currentRouteName() {
             return this.$route.query.planet;
