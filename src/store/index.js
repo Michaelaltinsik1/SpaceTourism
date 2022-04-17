@@ -11,7 +11,7 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-    findPlanetData(state, payload){
+    findData(state, payload){
       let pageKey = payload.page;
       let nameKey = payload.name;
       console.log("pageKey: ", pageKey);
@@ -21,8 +21,8 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    getPlanetData(context, payload){
-      context.commit("findPlanetData", payload);
+    getData(context, payload){
+      context.commit("findData", payload);
     }
   },
   modules: {

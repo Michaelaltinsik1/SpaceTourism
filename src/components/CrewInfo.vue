@@ -1,16 +1,13 @@
 <template>
     <article :class="$mq">
-        <h4 class="quaternary-heading upper-case">Commander</h4>
-        <h3 class="tertiary-heading upper-case">Douglas Hurley</h3>
-        <p class="text">
-            Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. 
-            He launched into space for the third time as commander of Crew Dragon Demo-2.
-        </p>
+        <h4 class="quaternary-heading upper-case">{{crewInformation.role}}</h4>
+        <h3 class="tertiary-heading upper-case">{{crewInformation.name}}</h3>
+        <p class="text">{{crewInformation.bio}}</p>
         <ul class="crew-nav">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li @click="setMemberName('douglas hurley')" :class="{ 'active' : currentRouteName === 'douglas hurley'}"></li>
+            <li @click="setMemberName('mark shuttleworth')" :class="{ 'active' : currentRouteName === 'mark shuttleworth'}"></li>
+            <li @click="setMemberName('victor glover')" :class="{ 'active' : currentRouteName === 'victor glover'}"></li>
+            <li @click="setMemberName('anousheh ansari')" :class="{ 'active' : currentRouteName === 'anousheh ansari'}"></li>
         </ul>
 
   </article>
@@ -18,7 +15,18 @@
 
 <script>
 export default {
-
+    props:['crewInformation'],
+    computed:{
+        currentRouteName() {
+            return this.$route.query.member;
+    
+        },
+    },
+    methods:{
+      setMemberName(member){
+        this.$emit('updateQuery', member);
+      }
+    }
 }
 </script>
 
@@ -48,9 +56,6 @@ export default {
             margin-top: 0.5rem;
             line-height: 1.4rem;
         }
-        .tertiary-heading, .quaternary-heading, .text{
-            text-align: center;
-        }
         .crew-nav{
             grid-area: nav;
             justify-self: center;
@@ -65,17 +70,21 @@ export default {
                 background-color: #979797;
                 border-radius: 999rem;
                 background-color: rgba($color: #979797, $alpha: 0.6);
-               
+                &:hover{
+                    background-color:rgb(203, 200, 200);
+                }
+                &.active{
+                    background-color:#fff;
+                }
             }
         }
-        &.tablet{
+        &.tablet, &.desktop{
             margin-top: 4rem;
             grid-template-areas:
                 "ranking"
                 "name"
                 "text"
                 "nav";
-            }
             .tertiary-heading{
                 padding-top: 0.5rem;
                 padding-bottom: 0.4rem;
@@ -83,5 +92,19 @@ export default {
             .text{
                  line-height: 1.6rem;
             }
+        }
+        &.desktop{
+            margin-top: 0rem;
+            max-width: 500px;
+            //min-width: 500px;
+            .tertiary-heading, .quaternary-heading, .text{
+                text-align:unset;
+            }
+            li{
+                min-width: 15px;
+                min-height: 15px;
+            }
+        }
+        
     }
 </style>

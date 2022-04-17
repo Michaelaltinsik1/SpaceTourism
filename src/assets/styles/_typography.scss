@@ -2,6 +2,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
 
 // h1, 
+
+.desktop{
+    font-size: 150px;
+    .primary-heading{
+        font-size: 150px;
+    }
+    .secondary-heading{
+        font-size: 100px;
+    }
+    .tertiary-heading{
+        font-size: 56px;
+    }
+    .quaternary-heading{
+        font-size: 32px;
+    }
+    .quinary-heading{
+        font-size: 28px;
+        letter-spacing: 4.75px;
+    }
+    .text{
+        font-size: 18px;
+    }
+}
+
+.tablet{
+    .primary-heading{
+        font-size: 120px;
+    }
+    .secondary-heading{
+        font-size: 80px;
+    }
+    .tertiary-heading{
+        font-size: 40px;
+    }
+    .quaternary-heading{
+        font-size: 24px;
+    }
+    .quinary-heading{
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+    .text{
+        font-size: 16px;
+    }
+}
+
+.mobile{
+    .primary-heading{
+        font-size: 80px;
+    }
+    .secondary-heading{
+        font-size: 56px;
+    }
+    .tertiary-heading{
+        font-size: 24px;
+    }
+    .quaternary-heading{
+        font-size: 16px;
+    }
+    .quinary-heading{
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+    .text{
+        font-size: 15px;
+    }
+    .explore{
+        font-size: 20px;
+    }
+}
+.desktop, .tablet{
+    .explore{
+        font-size: 32px;
+    }
+}
+
+/****
+    fixa och ta bort
+****/
 .primary-heading{
     // font-size: 150px;
     font-size: 150px;

@@ -38,7 +38,7 @@
       },
       getPlanetData(planet){
         console.log(planet);
-        this.$store.dispatch("getPlanetData", 
+        this.$store.dispatch("getData", 
           {
             name : planet, 
             page: "destinations"
