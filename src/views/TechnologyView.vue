@@ -51,7 +51,6 @@ export default {
       if(tech === 'space-capsule'){
         tech = 'space capsule';
       }
-        console.log(tech);
         this.$store.dispatch("getData", 
           {
             name : tech, 
@@ -59,7 +58,6 @@ export default {
           }
         );
         this.techInfo = this.$store.state.currData;
-        console.log("techInfo: ", this.techInfo);
       }
   },
   created(){

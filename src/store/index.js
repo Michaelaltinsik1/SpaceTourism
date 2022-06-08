@@ -13,10 +13,7 @@ export default new Vuex.Store({
   mutations: {
     findData(state, payload){
       let pageKey = payload.page;
-      let nameKey = payload.name;
-      console.log("pageKey: ", pageKey);
-      console.log("nameKey: ", nameKey);
-      
+      let nameKey = payload.name;    
       state.currData = state.siteData[pageKey].find(element => element.name.toLowerCase() === nameKey);
     }
   },

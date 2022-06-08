@@ -37,7 +37,6 @@
         }
       },
       getPlanetData(planet){
-        console.log(planet);
         this.$store.dispatch("getData", 
           {
             name : planet, 
@@ -45,7 +44,6 @@
           }
         );
         this.planetInfo = this.$store.state.currData;
-        console.log("planetInfo: ", this.planetInfo);
       }
     },
     created(){

@@ -39,7 +39,6 @@ export default {
         this.getMemberData(member);
       },
       getMemberData(member){
-        console.log(member);
         this.$store.dispatch("getData", 
           {
             name : member, 
@@ -47,7 +46,6 @@ export default {
           }
         );
         this.crewInfo = this.$store.state.currData;
-        console.log("crewInfo: ", this.crewInfo);
       },
         getImgUrl(pic) {
             return require(pic)
