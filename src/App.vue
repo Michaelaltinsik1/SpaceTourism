@@ -33,9 +33,6 @@
       flex-direction: column;
       .main-content{
         margin: auto 0rem;
-        &.destination{
-          //margin: 0rem;
-        }
       }
       
     }
