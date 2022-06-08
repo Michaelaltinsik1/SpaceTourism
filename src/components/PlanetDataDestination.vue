@@ -103,6 +103,11 @@ export default {
         .planet-info-container,.planet-nav-container{
           align-self: center;
         }
+        .planet-nav-container{
+          .nav-text{
+            margin: 0rem 0.5rem;
+          }
+        }
       }
       .center-text{
         text-align: center;
