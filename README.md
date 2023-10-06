@@ -1,24 +1,6 @@
-# spacetourism
+# Space tourism
 
-## Project setup
-```
-npm install
-```
+A frontend project were I use Vue and Sass. The project is based on a frontendmentor challenge were they provide the figma design files and my assignment was to try to mimic those design files as well as possible.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<a href="https://michael-spacetourism.netlify.app/" target="_blank" rel="noreferrer">Check out live site</a>
